@@ -1,0 +1,53 @@
+Request: 'http://localhost:8080/aluno/novo?nome=Daniel&email=daniel@email.com'
+Response: 'Aluno(id=1, nome=Daniel, email=daniel@email.com)'
+
+Request: 'http://localhost:8080/aluno/novo?nome=Daniel&email=daniel@email.com'
+Response: 'Aluno(id=2, nome=Daniel, email=daniel@email.com)'
+
+Request: 'http://localhost:8080/aluno/altera?id=2&nome=Jorge&email=jorge@email.com'
+Response: 'Aluno(id=2, nome=Jorge, email=jorge@email.com)'
+
+Request: 'http://localhost:8080/aluno/remove?id=2'
+Response: 'Aluno(id=2, nome=Jorge, email=jorge@email.com)'
+
+Request: 'http://localhost:8080/aluno/remove?id=2'
+Response: 'Aluno não existe.'
+
+Request: 'http://localhost:8080/professor/novo?nome=Daniel&email=daniel@email.com'
+Response: 'Professor(id=1, nome=Daniel, email=daniel@email.com)'
+
+Request: 'http://localhost:8080/professor/novo?nome=Daniel&email=daniel@email.com'
+Response: 'Professor(id=2, nome=Daniel, email=daniel@email.com)'
+
+Request: 'http://localhost:8080/professor/altera?id=2&nome=Jorge&email=jorge@email.com'
+Response: 'Professor(id=2, nome=Jorge, email=jorge@email.com)'
+
+Request: 'http://localhost:8080/professor/remove?id=2'
+Response: 'Professor(id=2, nome=Jorge, email=jorge@email.com)'
+
+Request: 'http://localhost:8080/professor/remove?id=2'
+Response: 'Professor não existe.'
+
+Request: 'http://localhost:8080/turma/novo?ano=2025&periodo=1&professorId=1'
+Response: 'Turma(id=1, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/turma/novo?ano=2025&periodo=1&professorId=1'
+Response: 'Turma(id=2, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/turma/remove?id=2'
+Response: 'Turma(id=2, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/turma/remove?id=2'
+Response: 'Turma não existe.'
+
+Request: 'http://localhost:8080/inscricao/novo?alunoId=1&turmaId=1'
+Response: 'Inscricao(id=1, dataHora=Fri Sep 26 14:19:25 BRT 2025, turma=Turma(id=1, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com)), aluno=Aluno(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/inscricao/novo?alunoId=1&turmaId=1'
+Response: 'Inscricao(id=2, dataHora=Fri Sep 26 14:19:25 BRT 2025, turma=Turma(id=1, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com)), aluno=Aluno(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/inscricao/remove?id=1'
+Response: 'Inscricao(id=1, dataHora=2025-09-26 14:19:25.965, turma=Turma(id=1, ano=2025, periodo=Periodo1, professor=Professor(id=1, nome=Daniel, email=daniel@email.com)), aluno=Aluno(id=1, nome=Daniel, email=daniel@email.com))'
+
+Request: 'http://localhost:8080/inscricao/remove?id=1'
+Response: 'Inscricao não existe.'
