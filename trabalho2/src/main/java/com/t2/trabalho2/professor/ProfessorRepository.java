@@ -1,4 +1,4 @@
-package com.t2.trabalho2.aluno;
+package com.t2.trabalho2.professor;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
